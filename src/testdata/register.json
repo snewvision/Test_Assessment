@@ -1,0 +1,18 @@
+{
+    "BaseURL": "https://practicesoftwaretesting.com/",
+
+    "RegisterDetails": {
+        "FirstName": "Abhay",
+        "LastName": "Sonare",
+        "DateOfBirth" : "2001-03-04",
+        "PostalCode" : "452001",
+        "HouseNumber": "44",
+        "Street" : "Atal Gate",
+        "City" : "Mumbai",
+        "State" : "Madhya Pradesh",
+        "Phone"  : "9876543219",
+        "EmailAddress" : "Abhay21@gmail.com",
+        "Password" : "Qsdf@321"
+
+    }
+}
