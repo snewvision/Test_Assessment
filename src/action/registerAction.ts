@@ -1,6 +1,7 @@
 import { Page, expect } from "@playwright/test"
 import {registerPage} from "../page/registerPage"
 import registerData from '../testdata/register.json'
+import {userdata} from "../testdata/random"
 
 type RegisterDetails = {
   FirstName: string;
@@ -15,6 +16,8 @@ type RegisterDetails = {
   EmailAddress: string;
   Password: string;
 };
+
+
 
 export class registerAction
 {
@@ -51,7 +54,7 @@ export class registerAction
 
         await this.registerPages.page.waitForTimeout(3000);
 
-        await this.registerPages.email.fill(registerData.EmailAddress)
+        await this.registerPages.email.fill(userdata.EmailAddress)
         await this.registerPages.password.fill(registerData.Password)
         
         await this.registerPages.registerButton.click()

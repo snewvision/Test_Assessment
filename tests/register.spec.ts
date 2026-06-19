@@ -1,5 +1,6 @@
 import { test, expect } from '../src/fixture/fixture';
 import testData from '../src/testdata/register.json'
+import { userdata } from '../src/testdata/random';
 
 test('TC_01 User Register successfully', async ({page, appAction }) => {
     await page.goto(testData.BaseURL)
