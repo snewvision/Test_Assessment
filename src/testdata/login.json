@@ -1,0 +1,9 @@
+{
+    "BaseURL": "https://practicesoftwaretesting.com/",
+
+    "LoginDetails": {
+        "EmailAddress" : "Tanuj122@gmail.com",
+        "Password" : "Swer@4321"
+
+    }
+}
