@@ -1,0 +1,101 @@
+Playwright basic:-
+
+
+use command for Playwright installation:  npm init playwright@latest
+use command to verify version of Playwright: npm playwright --version
+note   npm command use for : Used to install and manage packages
+
+Synchronous (Sync) : Tasks are executed one after another, in order.
+                     Code are execute line by line
+					 
+Asynchronous (Async) : All line are execute at same time.
+Typescript is Asynchronous type language.
+
+
+playwright.xml : file used create CI pipelines in github automatically.
+
+Page Object Model: Create separate classes/files for each page
+                   Store elements + actions of that page inside it
+				   
+				    
+common to run playwright command: npx playwright test
+                                  npx playwright test example.spec.js
+								  npx playwright test --headed
+								  npx playwright test --ui      :- use for UI changes
+								  
+npx command use for: Runs Playwright directly
+								  
+				for headed : test --headed
+							 loginTest.spec.ts
+								  
+								  
+Create a src folder in project :- create a file in src 
+														:- page - locators rahege
+														:- action - put all the methods inside, Methods rahegi
+														:- fixture - fixture is bridge hold the libaries. libraray hoti hai jiss se hu ✅ Reuse code ✅ Avoid duplication
+														:- test data - json file hoti hai
+														   It contains test inputs such as: usernames / passwords, URLs, form inputs, expected results, API payloads
+														
+Test data = to use your test cases and use to test your application. data you give to your test
+
+example.spec.ts = spec file is a key file which have the test
+👉 .spec.ts = Playwright test file
+👉 Contains test cases
+👉 Uses test and expect
+👉 Runs with Playwright test runner
+
+
+use this url: https://www.saucedemo.com/  for basic automation testing
+
+page.goto  = goto is function using open the URL
+
+=>  :- it comes from JavaScript / TypeScript, which Playwright is built on. Arrow function It is a shorter way to write a function in playwright.
+
+expect function : is used to check conditions in your test.
+
+
+
+Locators:-
+In Playwright, locators are the core mechanism to find and interact with elements on a web page (buttons, inputs, links, text, etc.).
+Playwright’s locator system is smart, auto‑waiting, and reliable compared to old-style selectors.
+
+These are the recommended built-in locators.
+page.getByRole() to locate by explicit and implicit accessibility attributes.
+page.getByText() to locate by text content.
+page.getByLabel() to locate a form control by associated label's text.
+page.getByPlaceholder() to locate an input by placeholder.
+page.getByAltText() to locate an element, usually image, by its text alternative.
+page.getByTitle() to locate an element by its title attribute.
+
+
+await page.getByLabel('User Name').fill('John');
+
+await page.getByLabel('Password').fill('secret-password');
+
+await page.getByRole('button', { name: 'Sign in' }).click();
+
+await expect(page.getByText('Welcome, John!')).toBeVisible();
+
+
+hook: -
+
+
+Assertion :- Playwright uses the expect API for assertions.
+In Playwright, an assertion is a way to verify that something on the page behaves or appears as expected. If the condition is not met, the test fails.
+
+Basic Idea
+
+An assertion answers questions like:
+
+“Is this element visible?”
+“Does this text match?”
+
+  await page.goto('https://example.com');
+
+  await expect(page).toHaveTitle('Example Domain');
+
+
+
+locator for all checkbox checked: use following-sibling methods
+//div[@class="form-group"]//label[text() = "Days:"]//following-sibling::div/input[@type="checkbox"]
+
