@@ -2,8 +2,19 @@
     "BaseURL": "https://practicesoftwaretesting.com/",
 
     "LoginDetails": {
-        "EmailAddress" : "Tanuj122@gmail.com",
-        "Password" : "Swer@4321"
+        "EmailAddress" : "Tanuj1@gmail.com",
+        "Password" : "Awer@4321"
 
+    },
+
+    "Checkout":
+    {
+        "HouseNumber" : "22"
+    },
+    "ContactMessage" :
+    {
+        "ContactMess" : "Hello This Shubham Payment Method Secure Payment123",
+        "ContactFile" : "src/PaymentFile/Payment.txt"
     }
+
 }

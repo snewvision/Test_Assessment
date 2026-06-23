@@ -1,9 +1,12 @@
 import { test, expect } from '../src/fixture/fixture';
 import testData from '../src/testdata/login.json'
 
-
-test('TC_01 User login with valid Credential', async ({page, appAction }) => {
+test('Product Search', async ({page, appAction }) => {
     await page.waitForLoadState('networkidle')
+
+    //login user
     await appAction.login.loginWithValidCredential(testData.LoginDetails)
-    
+
+    //search product
+    await appAction.search.searchProduct();
 });
